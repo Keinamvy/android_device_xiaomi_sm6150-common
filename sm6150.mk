@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,"true")
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
@@ -305,25 +305,9 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    extphonelib \
-    extphonelib-product \
-    extphonelib.xml \
-    extphonelib_product.xml \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti-telephony-hidl-wrapper-prd \
-    qti_telephony_hidl_wrapper.xml \
-    qti_telephony_hidl_wrapper_prd.xml \
-    qti-telephony-utils \
-    qti-telephony-utils-prd \
-    qti_telephony_utils.xml \
-    qti_telephony_utils_prd.xml \
-    telephony-ext \
     xiaomi-telephony-stub
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext \
     xiaomi-telephony-stub
 
 PRODUCT_COPY_FILES += \
@@ -356,7 +340,7 @@ PRODUCT_COPY_FILES += \
 
 
 $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.xiaomi)
-$(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
+$(call soong_config_set,qti_vibrator,use_effect_stream,true)
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
