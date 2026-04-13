@@ -30,4 +30,8 @@
     <string name="thermal_navigation">Navigation</string>
     <string name="thermal_streaming">Streaming</string>
     <string name="thermal_video">Video</string>
+
+    <!-- Ambient settings -->
+    <string name="doze_brightness_title">Always on brightness</string>
+    <string name="doze_brightness_summary">%s mode is enabled</string>
 </resources>
