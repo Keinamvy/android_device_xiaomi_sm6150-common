@@ -30,6 +30,8 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
+PRODUCT_PACKAGES += \
+    LunarisDolby
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
